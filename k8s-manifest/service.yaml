@@ -8,6 +8,5 @@ spec:
   ports:
   - port: 80
     name: http
-    targetPort: 4200
   selector:
     name: tiendatienda
