@@ -5,15 +5,12 @@ name: CI Pipeline Merge
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   code_build:
     name: Code build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: './tiendaTienda'
     strategy:
       matrix:
         node-version: [14.x]
@@ -65,7 +62,6 @@ jobs:
         cache: 'npm'
     - name: Code analysis
       run: echo "Static code analysis"
-      working-directory: ./tiendaTienda
       
   generate_artifact:
     name: Generate artifact
@@ -86,7 +82,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
       with:
-        images: tiendaTienda/block-master
+        images: oth4r/tiendatienda
     - name: Build and push Docker image
       uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
       with:
@@ -126,5 +122,5 @@ jobs:
              k8s-manifest/deployment.yaml
              k8s-manifest/ingress-dev.yaml
              k8s-manifest/service.yaml
-          images: 'Oth4r/block-master:main'
+          images: 'Oth4r/tiendatienda:master'
           pull: false

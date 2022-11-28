@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tiendaTienda
+  name: tiendatienda
 spec:
   selector:
     matchLabels:
-      name: tiendaTienda
+      name: tiendatienda
   template:
     metadata:
       labels:
-        name: tiendaTienda
+        name: tiendatienda
     spec:
       containers:
-        - image: Oth4r/tiendaTienda
-          name: tiendaTienda
+        - image: oth4r/tiendatienda
+          name: tiendatienda
           imagePullPolicy: Always
           ports:
             - containerPort: 80

@@ -1,20 +1,20 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: blockmaster
+  name: tiendatienda
   #annotations:
   #  nginx.ingress.kubernetes.io/rewrite-target: /
   # cambiar 20.72.99.142 por el IP de tu Ingress 
 spec:
   ingressClassName: nginx
   rules:
-  - host: tiendaTienda.20.72.99.142.nip.io
+  - host: tiendatienda.20.72.99.142.nip.io
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service: 
-            name: tiendaTienda
+            name: tiendatienda
             port:
               number: 80
