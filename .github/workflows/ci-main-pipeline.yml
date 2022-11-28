@@ -41,7 +41,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install dependencies
-      run: npm install
+      run: npm install --forece
     - name: Execute unit testing
       run: echo "Test"
 
