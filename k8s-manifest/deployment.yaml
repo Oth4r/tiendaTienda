@@ -16,5 +16,5 @@ spec:
           name: tiendatienda
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 4200
               protocol: TCP

@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: tiendatienda.20.72.99.142.nip.io
+  - host: tiendatienda.20.121.76.163.nip.io
     http:
       paths:
       - path: /
