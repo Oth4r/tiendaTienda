@@ -124,3 +124,5 @@ jobs:
              k8s-manifest/service.yaml
           images: 'oth4r/tiendatienda:master'
           pull: false
+      - name: restart deployment
+        run: kubectl rollout restart deploy tiendatienda -n grados
