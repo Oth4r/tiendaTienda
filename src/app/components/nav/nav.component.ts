@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
   public op_cart = false;
   public url;
   public subtotal = 0;
-  public socket=io('http://localhost:4201');
+  public socket=io('http://backtienda.20.121.76.163.nip.io');
 
   public carrito_arr :Array<any> = [];
   

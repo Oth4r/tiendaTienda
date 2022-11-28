@@ -36,7 +36,7 @@ export class IndexProductoComponent implements OnInit {
   public btn_cart = false;
   public token;
 
-  public socket=io('http://localhost:4201');
+  public socket=io('http://backtienda.20.121.76.163.nip.io');
 
   constructor(
     private _clienteService : ClienteService,
