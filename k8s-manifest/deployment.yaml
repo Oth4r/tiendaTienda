@@ -12,7 +12,7 @@ spec:
         name: tiendatienda
     spec:
       containers:
-        - image: oth4r/tiendatienda
+        - image: oth4r/tiendatienda:master
           name: tiendatienda
           imagePullPolicy: Always
           ports:
